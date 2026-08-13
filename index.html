@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aditya Shingare | Software Engineer</title>
+  <meta name="description" content="Portfolio of Aditya Shingare — Expert @ Codeforces, Full-Stack Developer, IIIT Lucknow. Building systems from Chrome extensions to computer vision pipelines.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0a0a0f">
+  
+  <!-- Favicon: Terminal cursor icon (green) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='20' y='70' width='60' height='15' fill='%2328c840'/></svg>">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">&lt;aditya /&gt;</a>
+      <div class="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#achievements" class="nav-link">Achievements</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="assets/resume.pdf" class="resume-btn" target="_blank" rel="noopener noreferrer">Resume ↗</a>
+      </div>
+      <button class="hamburger" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu">
+    <a href="#about" class="mobile-nav-link">About</a>
+    <a href="#experience" class="mobile-nav-link">Experience</a>
+    <a href="#projects" class="mobile-nav-link">Projects</a>
+    <a href="#skills" class="mobile-nav-link">Skills</a>
+    <a href="#achievements" class="mobile-nav-link">Achievements</a>
+    <a href="#contact" class="mobile-nav-link">Contact</a>
+    <a href="assets/resume.pdf" class="mobile-nav-link resume-btn" target="_blank" rel="noopener noreferrer">Resume ↗</a>
+  </div>
+
+  <main>
+    <!-- 1. Hero Section -->
+    <section id="hero" class="hero">
+      <canvas id="particles-canvas"></canvas>
+      <div class="hero-content">
+        <div class="terminal">
+          <div class="terminal-header">
+            <span class="terminal-dot" style="background: #ff5f57"></span>
+            <span class="terminal-dot" style="background: #ffbd2e"></span>
+            <span class="terminal-dot" style="background: #28c840"></span>
+          </div>
+          <div class="terminal-body">
+            <!-- JS will type content here -->
+          </div>
+        </div>
+        <p class="hero-subtitle">B.Tech Information Technology @ IIIT Lucknow<br>Turning caffeine into clean code since 2024.</p>
+        <div class="social-links">
+          <!-- GitHub -->
+          <a href="https://github.com/aditya-s45" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/adityashingare" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <!-- Codeforces -->
+          <a href="https://codeforces.com/profile/aditya_shingare" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Codeforces">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.5 7.5C5.328 7.5 6 8.172 6 9v10.5c0 .828-.672 1.5-1.5 1.5h-3C.672 21 0 20.328 0 19.5V9c0-.828.672-1.5 1.5-1.5h3zm9-4.5c.828 0 1.5.672 1.5 1.5v16.5c0 .828-.672 1.5-1.5 1.5h-3c-.828 0-1.5-.672-1.5-1.5V4.5c0-.828.672-1.5 1.5-1.5h3zm9 7.5c.828 0 1.5.672 1.5 1.5v9c0 .828-.672 1.5-1.5 1.5h-3c-.828 0-1.5-.672-1.5-1.5v-9c0-.828.672-1.5 1.5-1.5h3z"/></svg>
+          </a>
+          <!-- LeetCode -->
+          <a href="https://leetcode.com/u/adityaoncode/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LeetCode">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg>
+          </a>
+          <!-- CodeChef -->
+          <a href="https://www.codechef.com/users/codeninja45" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="CodeChef">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.257.004c-.256.033-.512.09-.769.18C9.39.594 8.48 1.628 8.3 2.812c-.05.326-.043.468.053.98.117.635.12.703.04 1.009-.147.553-.537.964-1.165 1.228a3.35 3.35 0 0 1-.437.148c-.069.016-.123.047-.16.093-.054.068-.03.132.095.256.069.069.091.08.248.126.48.139.748.31.985.633.123.168.262.478.295.66.05.269-.06.68-.26.981-.178.268-.382.445-.725.633-.197.107-.278.168-.278.209 0 .05.092.2.172.28.285.286.767.245 1.48-.123.466-.241.805-.34 1.18-.345.268-.003.468.04.727.158.383.174.634.4.893.81.177.279.277.522.414 1.003.292 1.024.48 1.498.845 2.133.458.798 1.098 1.436 1.728 1.724.29.132.537.173.77.13.172-.032.305-.11.548-.32.625-.54 1.27-.857 2.048-1.004.269-.05.827-.056 1.093-.01.735.123 1.36.46 1.872 1.014.12.13.222.225.243.225.107 0 .312-.326.482-.768.35-.909.53-1.852.534-2.818a6.441 6.441 0 0 0-.07-.954c-.16-.966-.5-1.79-1.053-2.546a5.154 5.154 0 0 0-.62-.695c-.127-.117-.157-.149-.157-.168 0-.037.15-.175.316-.29.492-.34.83-.73 1.052-1.218.064-.142.154-.39.175-.49l.012-.058-.14.01c-.49.038-1.06-.1-1.485-.357-.3-.182-.598-.477-.744-.738a3.01 3.01 0 0 1-.122-.253c-.024-.067-.052-.107-.082-.118-.048-.018-.196.024-.366.103-.363.169-.668.262-.994.304a2.84 2.84 0 0 1-.768-.027c-.345-.072-.65-.212-.965-.445a3.086 3.086 0 0 1-.508-.483c-.142-.175-.157-.185-.197-.13-.026.036-.031.103-.028.388.003.34-.018.55-.08.787-.09.346-.282.666-.53.887a2.26 2.26 0 0 1-.142.115c-.024.016-.023.02.008.029.077.024.238.01.422-.035.383-.095.668-.1.998-.014.275.071.496.197.725.414.26.245.404.504.484.87.06.278.05.592-.032.92-.05.195-.204.587-.253.642-.013.015-.027.003-.055-.048a2.86 2.86 0 0 0-.49-.667c-.314-.307-.63-.475-.996-.53a1.59 1.59 0 0 0-.33-.016c-.274.022-.488.1-.78.286-.175.111-.397.3-.512.435a3.58 3.58 0 0 0-.35.482c-.254.422-.403.846-.445 1.268-.018.179-.008.543.018.68.101.524.354.904.782 1.172.157.098.492.238.612.254.031.005.056.014.056.022 0 .04-.274.39-.483.618-.756.827-1.63 1.182-2.478 1.006-.385-.08-.675-.23-1.074-.56a5.86 5.86 0 0 0-.285-.228c-.013 0-.017.05-.013.137.037.76.343 1.483.892 2.105.252.286.627.574.97.744.456.227.918.323 1.465.307.448-.013.852-.1 1.327-.287a7.75 7.75 0 0 0 .94-.468c.42-.247.714-.388 1.013-.488a3.15 3.15 0 0 1 .974-.156c.513.008.922.1 1.397.314.366.165.65.354 1.04.688.397.34.65.51.932.623.357.143.703.183 1.068.123.73-.12 1.386-.594 1.894-1.372.468-.716.79-1.637.922-2.637.038-.29.065-.665.065-.926 0-.698-.1-1.36-.303-2.009a6.834 6.834 0 0 0-.573-1.353c-.25-.43-.444-.695-.795-1.084l-.22-.243.06-.073c.18-.22.38-.55.505-.836a3.678 3.678 0 0 0 .282-1.16c.015-.26-.013-.555-.074-.796a2.738 2.738 0 0 0-.478-.94 3.442 3.442 0 0 0-.407-.41C17.95 2.84 17.06 2.256 16.1 1.926c-.352-.12-.8-.222-1.12-.255-.172-.018-.632-.018-.798 0a3.12 3.12 0 0 0-.847.195c-.372.148-.64.32-.948.607a2.596 2.596 0 0 1-.24.208c-.015 0-.152-.14-.29-.295A3.093 3.093 0 0 0 10.5.314a3.63 3.63 0 0 0-.548-.17 3.038 3.038 0 0 0-.695-.14z"/></svg>
+          </a>
+          <!-- Email -->
+          <a href="mailto:workaholicaditya4518@gmail.com" class="social-link" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </a>
+        </div>
+        <div class="scroll-indicator">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" opacity="0.4"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. About Section -->
+    <section id="about" class="section">
+      <div class="section-header reveal">
+        <span class="section-label">~/about $</span>
+        <h2 class="section-title">About Me</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-content">
+        <div class="about-text reveal">
+          <p>Hey! I'm <strong>Aditya Shingare</strong>, a pre-final year B.Tech Information Technology student at <strong>IIIT Lucknow</strong>. I'm passionate about building robust, scalable software — from enterprise backend systems with Spring Boot to real-time platforms with Next.js and WebSockets.</p>
+          <p>When I'm not shipping features, I'm grinding algorithms. With an <strong>Expert</strong> rating on Codeforces and <strong>4★</strong> on CodeChef, competitive programming is where I sharpen my problem-solving instincts — having solved over <strong>1,000+ problems</strong> across 90+ contests.</p>
+          <p>I believe great engineers are built at the intersection of strong fundamentals and real-world building. Every project I take on is an excuse to learn something new and push the boundaries of what I can create.</p>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card reveal reveal-delay-1">
+            <span class="stat-number" data-target="1708">0</span>
+            <span class="stat-label">Codeforces</span>
+            <span class="stat-sublabel">Expert</span>
+          </div>
+          <div class="stat-card reveal reveal-delay-2">
+            <span class="stat-number" data-target="1873">0</span>
+            <span class="stat-label">LeetCode</span>
+            <span class="stat-sublabel">Knight</span>
+          </div>
+          <div class="stat-card reveal reveal-delay-3">
+            <span class="stat-number" data-target="1000" data-suffix="+">0</span>
+            <span class="stat-label">Problems</span>
+            <span class="stat-sublabel">Solved</span>
+          </div>
+          <div class="stat-card reveal reveal-delay-4">
+            <span class="stat-number" data-target="8.65">0</span>
+            <span class="stat-label">CGPA</span>
+            <span class="stat-sublabel">IIIT Lucknow</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Experience Section -->
+    <section id="experience" class="section">
+      <div class="section-header reveal">
+        <span class="section-label">~/experience $</span>
+        <h2 class="section-title">Experience</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-company">PayPal</div>
+          <div class="timeline-role">Mentee — Career Academy Program</div>
+          <div class="timeline-date">Mar 2026 — Aug 2026 · Remote</div>
+          <ul class="timeline-desc">
+            <li>Selected for an exclusive 6-month software engineering mentorship program under senior PayPal engineers.</li>
+            <li>Upskilling in system architecture, enterprise coding standards, and production-grade code review practices.</li>
+            <li>Engaging with real-world distributed systems concepts and fintech engineering patterns.</li>
+          </ul>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-company">E-Cell, IIIT Lucknow</div>
+          <div class="timeline-role">Coordinator</div>
+          <div class="timeline-date">Jun 2026 — Present</div>
+          <ul class="timeline-desc">
+            <li>Coordinated the Annual Startup Expo with 500+ attendees and 20+ corporate sponsors.</li>
+            <li>Led cross-functional teams for event logistics, outreach, and corporate engagement.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Projects Section -->
+    <section id="projects" class="section">
+      <div class="section-header reveal">
+        <span class="section-label">~/projects $</span>
+        <h2 class="section-title">Projects</h2>
+        <div class="section-line"></div>
+      </div>
+      
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card reveal" style="border-left-color: #ff6b6b">
+          <div class="project-card-content">
+            <h3 class="project-name">IRCTC Tatkal Auto-Filler</h3>
+            <p class="project-tagline">Automating India's fastest ticket race</p>
+            <div class="project-tags">
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">Chrome MV3</span>
+              <span class="project-tag">Angular DOM</span>
+              <span class="project-tag">CSS3</span>
+            </div>
+            <ul class="project-desc">
+              <li>Built a Chrome Extension (Manifest V3) that automates the entire IRCTC Tatkal booking flow — login to payment — in under 10 seconds, using zero npm dependencies for maximum execution speed.</li>
+              <li>Reverse-engineered Angular + PrimeNG's change detection by simulating character-by-character input events and full mouse event sequences (mousedown → mouseup → click) without triggering bot detection.</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/aditya-s45/Irctc-Tatkal-Automation" class="project-link" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card reveal" style="border-left-color: #4ecdc4">
+          <div class="project-card-content">
+            <h3 class="project-name">RubiksCV — Real-Time AR Solver</h3>
+            <p class="project-tagline">Scan. Solve. Overlay. In real time.</p>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">OpenCV</span>
+              <span class="project-tag">Flask</span>
+              <span class="project-tag">WebSockets</span>
+              <span class="project-tag">Kociemba</span>
+            </div>
+            <ul class="project-desc">
+              <li>Built a real-time computer vision pipeline using OpenCV and HSV color segmentation to detect a physical Rubik's Cube's face colors and map them into a virtual state matrix.</li>
+              <li>Applied Kociemba's Two-Phase algorithm to compute optimal solutions in under 20 moves and streamed step-by-step AR overlay guidance to a live frontend via WebSockets.</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/aditya-s45/RubiksCV" class="project-link" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+              <a href="https://rubikscv.onrender.com/" class="project-link" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card reveal" style="border-left-color: #ffd93d">
+          <div class="project-card-content">
+            <h3 class="project-name">DineSync — Enterprise Dining System</h3>
+            <p class="project-tagline">Enterprise-grade MVC with Spring Boot</p>
+            <div class="project-tags">
+              <span class="project-tag">Java</span>
+              <span class="project-tag">Spring Boot</span>
+              <span class="project-tag">Spring Security</span>
+              <span class="project-tag">PostgreSQL</span>
+              <span class="project-tag">Docker</span>
+            </div>
+            <ul class="project-desc">
+              <li>Architected a scalable MVC application using Spring Boot 3.4 and Java 21, supporting seamless product cataloging, cart management, and real-time order tracking.</li>
+              <li>Engineered robust authentication with Spring Security and OAuth2, enforcing RBAC and BCrypt password hashing. Containerized with Docker for cloud deployment.</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/aditya-s45/DineSync" class="project-link" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card reveal" style="border-left-color: #6c5ce7">
+          <div class="project-card-content">
+            <h3 class="project-name">Panthal — Full-Stack Social Platform</h3>
+            <p class="project-tagline">Real-time social platform with AI chatbot</p>
+            <div class="project-tags">
+              <span class="project-tag">Next.js</span>
+              <span class="project-tag">Node.js</span>
+              <span class="project-tag">MongoDB</span>
+              <span class="project-tag">Socket.io</span>
+              <span class="project-tag">Gemini API</span>
+            </div>
+            <ul class="project-desc">
+              <li>Developed a scalable content sharing platform merging video streaming and microblogging, utilizing Next.js for a responsive UI and Cloudinary for optimized media management.</li>
+              <li>Engineered a real-time chat architecture with Socket.io, supporting live dynamic rooms, presence indicators, and instant messaging with sub-second latency.</li>
+              <li>Designed complex MongoDB aggregation pipelines and integrated the Gemini API to power an intelligent platform chatbot.</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/aditya-s45/Panthal" class="project-link" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card reveal" style="border-left-color: #00cec9">
+          <div class="project-card-content">
+            <h3 class="project-name">PixelDeed — AI Land Tokenization</h3>
+            <p class="project-tagline">AI + Blockchain for land ownership</p>
+            <div class="project-tags">
+              <span class="project-tag">PyTorch</span>
+              <span class="project-tag">Meta HQ-SAM</span>
+              <span class="project-tag">Next.js</span>
+              <span class="project-tag">Solidity</span>
+              <span class="project-tag">Ethereum</span>
+            </div>
+            <ul class="project-desc">
+              <li>Developed an AI-driven decentralized application allowing users to draw boundaries on satellite maps, instantly appraise land value, and mint ownership deeds as NFTs.</li>
+              <li>Implemented an automated computer vision pipeline using Meta's Segment Anything Model (HQ-SAM) for pixel-perfect geodesic boundary segmentation.</li>
+              <li>Engineered a spectral valuation engine (pseudo-NDVI) to classify land quality, bridging AI analysis into a custom ERC-721/ERC-20 ecosystem on Ethereum.</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/aditya-s45/PixelDeed" class="project-link" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="other-projects reveal">
+        <h3 class="other-projects-header">// other noteworthy projects</h3>
+        <div class="other-projects-grid">
+          
+          <div class="other-project-card">
+            <a href="https://github.com/aditya-s45/Smart-Traffic-Management" class="other-project-name" target="_blank" rel="noopener noreferrer">STSMS</a>
+            <p class="other-project-desc">Smart Traffic & Street Safety System</p>
+            <div class="other-project-tags">
+              <span class="other-project-tag">Python</span>
+              <span class="other-project-tag">YOLO</span>
+              <span class="other-project-tag">OpenCV</span>
+              <span class="other-project-tag">Flask</span>
+            </div>
+          </div>
+
+          <div class="other-project-card">
+            <a href="https://github.com/bansal-ishaan/Drishya" class="other-project-name" target="_blank" rel="noopener noreferrer">Drishya</a>
+            <p class="other-project-desc">Web3 Film Distribution Platform</p>
+            <div class="other-project-tags">
+              <span class="other-project-tag">Next.js</span>
+              <span class="other-project-tag">Solidity</span>
+              <span class="other-project-tag">IPFS</span>
+              <span class="other-project-tag">Chainlink</span>
+            </div>
+            <a href="https://drishya1.onrender.com/" class="other-project-demo" target="_blank" rel="noopener noreferrer">Demo ↗</a>
+          </div>
+
+          <div class="other-project-card">
+            <a href="https://github.com/ayanokojix21/DeepDefend" class="other-project-name" target="_blank" rel="noopener noreferrer">DeepFake Detector</a>
+            <p class="other-project-desc">Video Authentication CNN</p>
+            <div class="other-project-tags">
+              <span class="other-project-tag">PyTorch</span>
+              <span class="other-project-tag">OpenCV</span>
+              <span class="other-project-tag">React.js</span>
+            </div>
+          </div>
+
+          <div class="other-project-card">
+            <a href="https://github.com/Samayyy96/Alles" class="other-project-name" target="_blank" rel="noopener noreferrer">Alles</a>
+            <p class="other-project-desc">AI-Powered Social Ecosystem</p>
+            <div class="other-project-tags">
+              <span class="other-project-tag">Next.js</span>
+              <span class="other-project-tag">Node.js</span>
+              <span class="other-project-tag">MongoDB</span>
+              <span class="other-project-tag">Socket.io</span>
+            </div>
+            <a href="https://alles-iota.vercel.app" class="other-project-demo" target="_blank" rel="noopener noreferrer">Demo ↗</a>
+          </div>
+
+          <div class="other-project-card">
+            <a href="https://github.com/aditya-s45/GeoSense2" class="other-project-name" target="_blank" rel="noopener noreferrer">GeoSense</a>
+            <p class="other-project-desc">Web3 Geospatial Intelligence</p>
+            <div class="other-project-tags">
+              <span class="other-project-tag">React</span>
+              <span class="other-project-tag">HQ-SAM</span>
+              <span class="other-project-tag">Solidity</span>
+              <span class="other-project-tag">Hardhat</span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Skills Section -->
+    <section id="skills" class="section">
+      <div class="section-header reveal">
+        <span class="section-label">~/skills $</span>
+        <h2 class="section-title">Tech Stack</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-container">
+        <!-- Category 1 -->
+        <div class="skill-category reveal">
+          <h3 class="skill-category-title">Languages</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Solidity</span>
+            <span class="skill-tag">C</span>
+            <span class="skill-tag">HTML/CSS</span>
+          </div>
+        </div>
+        <!-- Category 2 -->
+        <div class="skill-category reveal reveal-delay-1">
+          <h3 class="skill-category-title">Frameworks & Libraries</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Spring Boot</span>
+            <span class="skill-tag">React.js</span>
+            <span class="skill-tag">Next.js</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Express.js</span>
+            <span class="skill-tag">Flask</span>
+            <span class="skill-tag">Socket.io</span>
+            <span class="skill-tag">Spring Security</span>
+            <span class="skill-tag">Thymeleaf</span>
+          </div>
+        </div>
+        <!-- Category 3 -->
+        <div class="skill-category reveal reveal-delay-2">
+          <h3 class="skill-category-title">Databases & DevOps</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub Actions</span>
+            <span class="skill-tag">Linux</span>
+          </div>
+        </div>
+        <!-- Category 4 -->
+        <div class="skill-category reveal reveal-delay-3">
+          <h3 class="skill-category-title">AI / ML & Vision</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">OpenCV</span>
+            <span class="skill-tag">YOLO</span>
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">Meta HQ-SAM</span>
+            <span class="skill-tag">Gemini API</span>
+            <span class="skill-tag">Kociemba</span>
+          </div>
+        </div>
+        <!-- Category 5 -->
+        <div class="skill-category reveal reveal-delay-4">
+          <h3 class="skill-category-title">Core Fundamentals</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Data Structures & Algorithms</span>
+            <span class="skill-tag">Object-Oriented Design</span>
+            <span class="skill-tag">DBMS</span>
+            <span class="skill-tag">Operating Systems</span>
+            <span class="skill-tag">Computer Networks</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Achievements Section -->
+    <section id="achievements" class="section">
+      <div class="section-header reveal">
+        <span class="section-label">~/achievements $</span>
+        <h2 class="section-title">Achievements</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="achievements-grid">
+        
+        <div class="achievement-card reveal">
+          <div class="achievement-icon" style="background-color: rgba(255,217,61,0.15)">🏆</div>
+          <div class="achievement-text">
+            <h4>Amazon ML Summer School Scholar</h4>
+            <p>Selected from <span class="achievement-highlight">130,000+ applicants</span> nationwide for Amazon's machine learning program mentored by Applied Scientists.</p>
+          </div>
+        </div>
+
+        <div class="achievement-card reveal">
+          <div class="achievement-icon" style="background-color: rgba(255,107,107,0.15)">🥇</div>
+          <div class="achievement-text">
+            <h4>Hack-o-Fiesta v6.1 Winner</h4>
+            <p>First prize at IIIT Lucknow's flagship <span class="achievement-highlight">24-hour global</span> AI/Web3 hackathon.</p>
+          </div>
+        </div>
+
+        <div class="achievement-card reveal">
+          <div class="achievement-icon" style="background-color: rgba(0,206,201,0.15)">🌍</div>
+          <div class="achievement-text">
+            <h4>Linux Foundation LiFT Scholar</h4>
+            <p><span class="achievement-highlight">1 of only 500 recipients globally</span> for the Shubhra Kar Linux Foundation Training Scholarship.</p>
+          </div>
+        </div>
+
+        <div class="achievement-card reveal">
+          <div class="achievement-icon" style="background-color: rgba(108,92,231,0.15)">🎓</div>
+          <div class="achievement-text">
+            <h4>Reliance Foundation Scholar</h4>
+            <p><span class="achievement-highlight">Top 5%</span> of 100,000+ applicants for India's prestigious merit scholarship.</p>
+          </div>
+        </div>
+
+        <div class="achievement-card reveal">
+          <div class="achievement-icon" style="background-color: rgba(0,255,200,0.15)">🚀</div>
+          <div class="achievement-text">
+            <h4>Rootstock AI BUIDL Hackathon Finalist</h4>
+            <p>Ranked in the <span class="achievement-highlight">Top 21 teams</span> globally.</p>
+          </div>
+        </div>
+
+        <div class="achievement-card reveal">
+          <div class="achievement-icon" style="background-color: rgba(168,85,247,0.15)">🧮</div>
+          <div class="achievement-text">
+            <h4>IOQM 2023 Qualifier</h4>
+            <p><span class="achievement-highlight">Top 1%</span> of 88,000+ candidates in the Indian Olympiad Qualifier in Mathematics.</p>
+          </div>
+        </div>
+
+        <div class="achievement-card reveal">
+          <div class="achievement-icon" style="background-color: rgba(77,124,254,0.15)">📊</div>
+          <div class="achievement-text">
+            <h4>Competitive Programming Ratings</h4>
+            <p><span class="achievement-highlight">Codeforces Expert (1708)</span> · CodeChef 4★ (1827) · LeetCode Knight (1873) — 1,000+ problems solved across 90+ rated contests.</p>
+          </div>
+        </div>
+
+        <div class="achievement-card reveal">
+          <div class="achievement-icon" style="background-color: rgba(78,205,196,0.15)">💻</div>
+          <div class="achievement-text">
+            <h4>Google Big Code Challenge</h4>
+            <p>Ranked in <span class="achievement-highlight">Top 1,500</span> nationally.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. Contact Section -->
+    <section id="contact" class="section">
+      <div class="section-header reveal">
+        <span class="section-label">~/contact $</span>
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-content reveal">
+        <p class="contact-text">I'm currently looking for software engineering internship opportunities. Whether you have a role that fits, a project idea, or just want to say hi — my inbox is always open.</p>
+        <a href="mailto:workaholicaditya4518@gmail.com" class="contact-email">workaholicaditya4518@gmail.com</a>
+        <div class="contact-socials">
+          <a href="https://github.com/aditya-s45" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/adityashingare" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="mailto:workaholicaditya4518@gmail.com" class="social-link" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 8. Footer -->
+  <footer class="footer">
+    <p class="footer-text">Designed & Built by <code>aditya-s45</code> · © 2026</p>
+  </footer>
+
+  <!-- Script Execution -->
+  <script src="script.js" defer></script>
+</body>
+</html>
