@@ -101,79 +101,51 @@ function initParticles() {
     animate();
 }
 
-// ── 2. Terminal Typing Animation ───────────────────────────────────────────
-function initTerminal() {
-    const terminalBody = document.querySelector('.terminal-body');
-    if (!terminalBody) return;
+// ── 2. Typewriter Animation ───────────────────────────────────────────────
+function initTypewriter() {
+    const textEl = document.getElementById('typewriter-text');
+    if (!textEl) return;
 
-    const lines = [
-        { prompt: '$ ', command: 'whoami', type: 'command' },
-        { output: 'Aditya Shingare', type: 'output' },
-        { empty: true },
-        { prompt: '$ ', command: 'cat tagline.txt', type: 'command' },
-        { output: 'Expert @ Codeforces · 4★ @ CodeChef · Full-Stack Developer', type: 'output' },
-        { empty: true },
-        { prompt: '$ ', command: 'cat about.txt', type: 'command' },
-        { output: 'B.Tech IT @ IIIT Lucknow | 1000+ Problems Solved | Building cool stuff.', type: 'output' }
+    const phrases = [
+        "Building scalable enterprise systems.",
+        "Engineering real-time web platforms.",
+        "Developing AI & Web3 applications.",
+        "Turning caffeine into clean code."
     ];
+    
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingSpeed = 50;
 
-    setTimeout(async () => {
-        for (let i = 0; i < lines.length; i++) {
-            const line = lines[i];
-            const lineEl = document.createElement('div');
-            lineEl.className = 'terminal-line';
-            terminalBody.appendChild(lineEl);
-
-            if (line.empty) {
-                lineEl.innerHTML = '&nbsp;';
-                await new Promise(r => setTimeout(r, 100));
-            } else if (line.type === 'command') {
-                const promptSpan = document.createElement('span');
-                promptSpan.className = 'terminal-prompt';
-                promptSpan.textContent = line.prompt;
-                lineEl.appendChild(promptSpan);
-
-                const cmdSpan = document.createElement('span');
-                cmdSpan.className = 'terminal-command';
-                lineEl.appendChild(cmdSpan);
-
-                const cursor = document.createElement('span');
-                cursor.className = 'cursor';
-                cursor.textContent = '';
-                lineEl.appendChild(cursor);
-
-                for (let j = 0; j < line.command.length; j++) {
-                    cmdSpan.textContent += line.command[j];
-                    await new Promise(r => setTimeout(r, 40));
-                }
-                cursor.remove();
-                await new Promise(r => setTimeout(r, 300));
-            } else if (line.type === 'output') {
-                const promptSpan = document.createElement('span');
-                promptSpan.className = 'terminal-prompt';
-                promptSpan.textContent = '> ';
-                lineEl.appendChild(promptSpan);
-
-                const outSpan = document.createElement('span');
-                outSpan.className = 'terminal-output';
-                lineEl.appendChild(outSpan);
-
-                const cursor = document.createElement('span');
-                cursor.className = 'cursor';
-                cursor.textContent = '';
-                lineEl.appendChild(cursor);
-
-                for (let j = 0; j < line.output.length; j++) {
-                    outSpan.textContent += line.output[j];
-                    await new Promise(r => setTimeout(r, 20));
-                }
-                if (i !== lines.length - 1) {
-                    cursor.remove();
-                }
-                await new Promise(r => setTimeout(r, 300));
-            }
+    function type() {
+        const currentPhrase = phrases[phraseIndex];
+        
+        if (isDeleting) {
+            textEl.textContent = currentPhrase.substring(0, charIndex - 1);
+            charIndex--;
+            typingSpeed = 30; // Delete faster
+        } else {
+            textEl.textContent = currentPhrase.substring(0, charIndex + 1);
+            charIndex++;
+            typingSpeed = 60; // Type normal
         }
-    }, 500);
+
+        let delay = typingSpeed;
+
+        if (!isDeleting && charIndex === currentPhrase.length) {
+            delay = 2000; // Pause at end of phrase
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            delay = 500; // Pause before next phrase
+        }
+
+        setTimeout(type, delay);
+    }
+
+    setTimeout(type, 1000);
 }
 
 // ── 3. Scroll Reveal Animation ─────────────────────────────────────────────
@@ -344,7 +316,7 @@ function initProjectCards() {
 // ── 7. Initialization ──────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
     initParticles();
-    initTerminal();
+    initTypewriter();
     initScrollReveal();
     initStatCounters();
     initNavigation();
