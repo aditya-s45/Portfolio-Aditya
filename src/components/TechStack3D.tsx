@@ -1,6 +1,6 @@
 import React, { useRef, useMemo, useState, useEffect } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { Text, Float, MeshDistortMaterial, Environment, OrbitControls, Stars } from '@react-three/drei';
+import { Canvas } from '@react-three/fiber';
+import { Text, Float, MeshDistortMaterial, OrbitControls, Stars } from '@react-three/drei';
 import * as THREE from 'three';
 import './TechStack3D.css';
 

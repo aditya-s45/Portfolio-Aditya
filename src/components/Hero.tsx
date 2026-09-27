@@ -22,7 +22,7 @@ const TypewriterText: React.FC = () => {
   ];
 
   useEffect(() => {
-    let timer: NodeJS.Timeout;
+    let timer: ReturnType<typeof setTimeout>;
     const handleType = () => {
       const i = loopNum % phrases.length;
       const fullText = phrases[i];

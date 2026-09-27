@@ -40,7 +40,7 @@ const Experience: React.FC = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      itemsRef.current.forEach((item, index) => {
+      itemsRef.current.forEach((item) => {
         if (!item) return;
         
         gsap.fromTo(item,
@@ -77,7 +77,7 @@ const Experience: React.FC = () => {
             <div 
               className="timeline-item" 
               key={index}
-              ref={el => itemsRef.current[index] = el}
+              ref={el => { itemsRef.current[index] = el; }}
             >
               <div className="timeline-dot"></div>
               <div className="experience-card">
