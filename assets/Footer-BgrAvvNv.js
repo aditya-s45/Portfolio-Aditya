@@ -1,0 +1,1 @@
+import{i as e,n as t}from"./index-DCve6GY4.js";e();var n=t(),r=()=>(0,n.jsx)(`footer`,{className:`footer`,children:(0,n.jsx)(`div`,{className:`footer-content`,children:(0,n.jsxs)(`p`,{className:`footer-text`,children:[(0,n.jsx)(`span`,{className:`terminal-prompt`,children:`$ echo`}),` "Designed & Built by aditya-s45 · © 2026"`]})})});export{r as default};
