@@ -1,0 +1,118 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  transition: all 0.3s ease;
+  padding: 30px 5%;
+}
+
+.navbar.scrolled {
+  padding: 15px 5%;
+  background: rgba(10, 10, 20, 0.8);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.nav-logo {
+  font-family: 'Fira Code', monospace;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #00ffc8;
+  text-decoration: none;
+  z-index: 101;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-link {
+  color: #ccd6f6;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-family: 'Fira Code', monospace;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #00ffc8;
+}
+
+.nav-resume-btn {
+  color: #00ffc8;
+  border: 1px solid #00ffc8;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.nav-resume-btn:hover {
+  background: rgba(0, 255, 200, 0.1);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 101;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 2px;
+  margin: 5px auto;
+  transition: all 0.3s ease;
+  background-color: #00ffc8;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: #112240;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s ease;
+  }
+
+  .nav-links.open {
+    right: 0;
+    box-shadow: -10px 0 30px -10px rgba(0, 0, 0, 0.5);
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}

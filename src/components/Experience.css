@@ -1,0 +1,154 @@
+.experience-section {
+  padding: 100px 0;
+  min-height: 100vh;
+  position: relative;
+  z-index: 10;
+  color: #fff;
+}
+
+.timeline-container {
+  position: relative;
+  padding-left: 40px;
+  margin-top: 60px;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, 
+    #00f0ff 0%, 
+    rgba(0, 240, 255, 0.3) 50%, 
+    rgba(0, 240, 255, 0) 100%);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -46px;
+  top: 24px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #00f0ff;
+  box-shadow: 0 0 15px #00f0ff, 0 0 30px #00f0ff;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 240, 255, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(0, 240, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 240, 255, 0);
+  }
+}
+
+.experience-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 32px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateX(10px);
+  border-color: rgba(0, 240, 255, 0.3);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.company-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+.duration {
+  font-size: 0.875rem;
+  color: #888;
+  font-family: 'Fira Code', monospace;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+.role {
+  font-size: 1.125rem;
+  color: #00f0ff;
+  font-weight: 500;
+  margin: 0 0 24px 0;
+}
+
+.experience-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-bullets li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  color: #b3b3b3;
+  line-height: 1.6;
+}
+
+.experience-bullets li:last-child {
+  margin-bottom: 0;
+}
+
+.experience-bullets li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: #00f0ff;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .timeline-container {
+    padding-left: 30px;
+  }
+  
+  .timeline-dot {
+    left: -36px;
+  }
+  
+  .experience-card {
+    padding: 24px;
+  }
+}

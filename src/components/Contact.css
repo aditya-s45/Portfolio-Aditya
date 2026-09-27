@@ -1,0 +1,119 @@
+.contact-section {
+  padding: 150px 5%;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-section .section-label {
+  margin-bottom: 20px;
+}
+
+.contact-section .section-title {
+  font-size: 3.5rem;
+  margin-bottom: 30px;
+}
+
+.contact-body {
+  color: #a0a0b0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 50px;
+}
+
+.email-button {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: rgba(0, 255, 200, 0.1);
+  border: 1px solid #00ffc8;
+  padding: 20px 40px;
+  border-radius: 50px;
+  color: #00ffc8;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-bottom: 50px;
+  box-shadow: 0 0 30px rgba(0, 255, 200, 0.2);
+}
+
+.email-button:hover {
+  background: rgba(0, 255, 200, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 40px rgba(0, 255, 200, 0.3);
+}
+
+.email-icon {
+  font-size: 1.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-icon:hover {
+  background: #00ffc8;
+  color: #0a0a14;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 255, 200, 0.3);
+}
+
+.resume-download-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 12px 25px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.resume-download-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-icon {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .contact-section .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .email-button {
+    padding: 15px 25px;
+    font-size: 1rem;
+  }
+}
