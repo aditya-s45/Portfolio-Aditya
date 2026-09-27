@@ -55,7 +55,7 @@ const Navbar: React.FC = () => {
               {link.name}
             </a>
           ))}
-          <a href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer" className="nav-resume-btn">
+          <a href={`${import.meta.env.BASE_URL}assets/resume.pdf`} target="_blank" rel="noopener noreferrer" className="nav-resume-btn">
             Resume
           </a>
         </div>

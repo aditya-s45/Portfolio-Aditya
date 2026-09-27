@@ -32,7 +32,7 @@ const Contact: React.FC = () => {
           </a>
         </div>
 
-        <a href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer" className="resume-download-btn">
+        <a href={`${import.meta.env.BASE_URL}assets/resume.pdf`} target="_blank" rel="noopener noreferrer" className="resume-download-btn">
           <HiOutlineDocumentDownload className="btn-icon" />
           Download Resume
         </a>
